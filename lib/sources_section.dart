@@ -90,7 +90,8 @@ class SourcesSection extends StatelessWidget {
                     );
                   },
                   itemCount: articles.length,
-                ))
+                ),
+                ),
               ],
             );
           }

@@ -37,4 +37,20 @@ class HomeRepoRemoteImpl implements HomeRepo {
     print("News Sources Saved on local DB");
     return sourceResponse;
   }
+  Future<NewsDataResponse> searchArticles(String searchQuery, int pageNumber) async {
+    Uri url = Uri.https("newsapi.org", "/v2/everything", {
+      "apiKey": "01223e9ad796488c9e98254e365a7ab2",
+      "q": searchQuery,
+  "page":pageNumber.toString(),
+      "pageSize":"10",
+    });
+    print(url);
+    http.Response response = await http.get(url);
+    var json = jsonDecode(response.body);
+    NewsDataResponse newsDataResponse = NewsDataResponse.fromJson(json);
+    await HiveService.saveNewsResponse(newsDataResponse);
+    print("News newsDataResponse  Saved on local DB");
+    return newsDataResponse;
+  }
+
 }

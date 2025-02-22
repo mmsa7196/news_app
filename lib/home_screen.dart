@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:news_c13/app_drawer.dart';
 import 'package:news_c13/categories_section.dart';
+import 'package:news_c13/models/search/search_screen.dart';
 import 'package:news_c13/models/source_response.dart';
 import 'package:news_c13/sources_section.dart';
 
@@ -22,6 +23,15 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           title: Text(categoryName ?? "Home",style: Theme.of(context).textTheme.titleLarge,),
           centerTitle: true,
+          actions: [Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: IconButton(onPressed: () {
+              Navigator.pushNamed(context, SearchScreen.routeName);
+            }, icon: Icon(Icons.search_rounded, color: theme.primaryColor,),
+            ),
+            ),
+
+          ],
         ),
         drawer: AppDrawer(
           onTap: onDrawerClicked,

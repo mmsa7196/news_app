@@ -7,6 +7,7 @@ import 'package:news_c13/home_screen.dart';
 import 'package:news_c13/internet_service.dart';
 import 'package:news_c13/models/articles.dart';
 import 'package:news_c13/models/news_data_response.dart';
+import 'package:news_c13/models/search/search_screen.dart';
 import 'package:news_c13/models/source_response.dart';
 
 import 'package:provider/provider.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
       themeMode:provider.themeMode ,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
+        SearchScreen.routeName: (context) => SearchScreen(),
       },
       initialRoute: HomeScreen.routeName,
     );

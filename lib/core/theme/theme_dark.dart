@@ -56,6 +56,11 @@ class DarkTheme extends BaseTheme {
         color: primaryColor,
         fontWeight: FontWeight.bold,
       ),
+      labelMedium:GoogleFonts.inter(
+        fontSize: 16,
+        color: secondaryColor,
+        fontWeight: FontWeight.bold,
+      ),
       titleLarge: GoogleFonts.inter(
         fontSize: 26,
         color: primaryColor,

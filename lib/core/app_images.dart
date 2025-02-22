@@ -16,17 +16,17 @@ class AppImages {
 
   //////////////////////// dark ///////////////////////////
 
-  static const String sportsDark = 'assets/sports_d.png';
+  static const String sportsDark = 'assets/images/sports_dark.png';
 
-  static const String generalDark = 'assets/general_d.png';
+  static const String generalDark = 'assets/images/general_dark.png';
 
-  static const String entertainmentDark = 'assets/entertainment_d.png';
+  static const String entertainmentDark = 'assets/images/entertainment_dark.png';
 
-  static const String healthDark = 'assets/health_d.png';
+  static const String healthDark = 'assets/images/health_dark.png';
 
-  static const String scienceDark = 'assets/science_d.png';
+  static const String scienceDark = 'assets/images/science_dark.png';
 
-  static const String technologyDark = 'assets/technology_d.png';
+  static const String technologyDark = 'assets/images/technology_dark.png';
 
-  static const String businessDark = 'assets/business_d.png';
+  static const String businessDark = 'assets/images/business_dark.png';
 }

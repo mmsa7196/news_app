@@ -13,7 +13,7 @@ class AppDrawer extends StatelessWidget {
     var theme = Theme.of(context);
     var myProvider = Provider.of<MyProvider>(context);
     return Container(
-      color: Color(0xFF171717),
+      color: const Color(0xFF171717),
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width * 0.8,
       height: double.infinity,
@@ -24,13 +24,16 @@ class AppDrawer extends StatelessWidget {
               width: double.infinity,
               height: 220,
               alignment: Alignment.center,
-              child: Text("News App".tr(),style: theme.textTheme.headlineMedium,)),
+              child: Text(
+                "News App".tr(),
+                style: theme.textTheme.headlineMedium,
+              )),
           InkWell(
             onTap: () {
               onTap();
             },
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.home_outlined,
                 size: 30,
                 color: Colors.white,
@@ -39,25 +42,25 @@ class AppDrawer extends StatelessWidget {
                 "Go To Home".tr(),
                 style: theme.textTheme.titleMedium,
               ),
-              trailing: Icon(
+              trailing: const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
               ),
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.white,
             thickness: 2,
             indent: 20,
             endIndent: 20,
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Column(
             children: [
               ListTile(
-                leading: ImageIcon(
+                leading: const ImageIcon(
                   AssetImage("assets/images/brush.png"),
                   color: Colors.white,
                   size: 30,
@@ -92,14 +95,16 @@ class AppDrawer extends StatelessWidget {
                     items: [
                       DropdownMenuItem(
                         value: ThemeMode.light,
-                        child: Text("Light".tr(),
-                            style: theme.textTheme.titleMedium,
+                        child: Text(
+                          "Light".tr(),
+                          style: theme.textTheme.titleMedium,
                         ),
                       ),
                       DropdownMenuItem(
                         value: ThemeMode.dark,
-                        child: Text("Dark".tr(),
-                          style:theme.textTheme.titleMedium ,
+                        child: Text(
+                          "Dark".tr(),
+                          style: theme.textTheme.titleMedium,
                         ),
                       ),
                     ],
@@ -113,25 +118,22 @@ class AppDrawer extends StatelessWidget {
               ),
             ],
           ),
-
-
-
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          Divider(
+          const Divider(
             color: Colors.white,
             thickness: 2,
             indent: 20,
             endIndent: 20,
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           Column(
             children: [
               ListTile(
-                leading: ImageIcon(
+                leading: const ImageIcon(
                   AssetImage("assets/images/icons.png"),
                   color: Colors.white,
                   size: 30,

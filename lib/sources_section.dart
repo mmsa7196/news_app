@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_c13/bloc/cubit.dart';
@@ -27,14 +28,14 @@ class SourcesSection extends StatelessWidget {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: Text("Error"),
+                title:  Text("Error".tr()),
                 content: Text(state.error),
                 actions: [
                   ElevatedButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text("Ok"))
+                      child:  Text("Ok".tr()))
                 ],
               ),
             );
@@ -42,14 +43,15 @@ class SourcesSection extends StatelessWidget {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: Text("Error"),
+                title:  Text("Error".tr()),
                 content: Text(state.error),
                 actions: [
                   ElevatedButton(
                       onPressed: () {
                         onTap();
                       },
-                      child: Text("Ok"))
+                      child:  Text("Ok".tr())
+                  ),
                 ],
               ),
             );
@@ -61,7 +63,7 @@ class SourcesSection extends StatelessWidget {
               HomeCubit.get(context).newsDataResponse?.articles ?? [];
           if (state is GetSourcesLoadingState ||
               state is GetNewsDataLoadingState) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else {
             return Column(
               children: [
@@ -73,7 +75,7 @@ class SourcesSection extends StatelessWidget {
                           HomeCubit.get(context).changeSelectedSource(value);
                         },
                         dividerColor: Colors.transparent,
-                        indicatorColor: Color(0xFF171717),
+                        indicatorColor: const Color(0xFF171717),
                         labelColor: theme.primaryColor,
                         unselectedLabelColor: theme.primaryColor,
                         isScrollable: true,

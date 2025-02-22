@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:news_c13/models/articles.dart';
@@ -18,17 +19,19 @@ class _SearchScreenState extends State<SearchScreen> {
   int currentPage = 1;
   String? errorMessage = "";
   TextEditingController searchController = TextEditingController();
-  ScrollController scrollController= ScrollController();
+  ScrollController scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
     scrollController.addListener(() {
-      if(scrollController.position.pixels == scrollController.position.maxScrollExtent){
-        if(scrollController.position.pixels == scrollController.position.maxScrollExtent && articles.length<maxResult){
+      if (scrollController.position.pixels ==
+          scrollController.position.maxScrollExtent) {
+        if (scrollController.position.pixels ==
+                scrollController.position.maxScrollExtent &&
+            articles.length < maxResult) {
           _search();
         }
-
       }
     });
   }
@@ -57,7 +60,7 @@ class _SearchScreenState extends State<SearchScreen> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: theme.scaffoldBackgroundColor,
-                hintText: "Search",
+                hintText: "Search".tr(),
                 prefixIconColor: theme.primaryColor,
                 suffixIconColor: theme.primaryColor,
                 hintStyle: theme.textTheme.titleSmall,
@@ -91,7 +94,7 @@ class _SearchScreenState extends State<SearchScreen> {
               child: Center(
                 child: Text(
                   errorMessage!,
-                  style: TextStyle(color: Colors.red),
+                  style: const TextStyle(color: Colors.red),
                 ),
               ),
             ),
@@ -104,11 +107,11 @@ class _SearchScreenState extends State<SearchScreen> {
           if (articles.isNotEmpty)
             SliverList.separated(
               itemBuilder: (context, index) {
-                if(index == articles.length){
+                if (index == articles.length) {
                   return CircularProgressIndicator(
                     color: theme.primaryColor,
                   );
-                }else{
+                } else {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: NewsItem(
@@ -117,8 +120,10 @@ class _SearchScreenState extends State<SearchScreen> {
                   );
                 }
               },
-              separatorBuilder: (context, index) => SizedBox(height: 16),
-              itemCount: articles.length<maxResult?articles.length+1:articles.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 16),
+              itemCount: articles.length < maxResult
+                  ? articles.length + 1
+                  : articles.length,
             ),
         ],
       ),

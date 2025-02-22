@@ -8,13 +8,13 @@ class CategoriesSection extends StatelessWidget {
   CategoriesSection({required this.onTap, super.key});
 
   List<String> categories = [
-    "general".tr(),
-    "business".tr(),
-    "sports".tr(),
-    "health".tr(),
-    "entertainment".tr(),
-    "technology".tr(),
-    "science".tr(),
+    "general",
+    "business",
+    "sports",
+    "health",
+    "entertainment",
+    "technology",
+    "science",
   ];
 
   @override
@@ -29,11 +29,11 @@ class CategoriesSection extends StatelessWidget {
         children: [
           Text(
             "Good Morning\nHere is Some News For You".tr(),
-            style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 26,fontWeight: FontWeight.bold),
           ),
           Expanded(
             child: ListView.separated(
-              separatorBuilder: (context, index) => SizedBox(
+              separatorBuilder: (context, index) => const SizedBox(
                 height: 8,
               ),
               itemBuilder: (context, index) {
@@ -66,10 +66,10 @@ class CategoriesSection extends StatelessWidget {
                               ? [
                                   Container(
                                     margin:
-                                        EdgeInsets.symmetric(horizontal: 12),
+                                        const EdgeInsets.symmetric(horizontal: 12),
                                     child: Text(
                                       "View All".tr(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.bold),
                                     ),
@@ -88,10 +88,10 @@ class CategoriesSection extends StatelessWidget {
                                   ),
                                   Container(
                                     margin:
-                                        EdgeInsets.symmetric(horizontal: 12),
+                                        const EdgeInsets.symmetric(horizontal: 12),
                                     child: Text(
                                       "View All".tr(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.bold),
                                     ),

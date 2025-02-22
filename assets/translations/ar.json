@@ -1,6 +1,6 @@
 {
   "Home" : "الرئيسية",
-  "Good Morning\n Here is Some News For You" : "صباح الخير، إليك بعض الأخبار",
+  "Good Morning\nHere is Some News For You" : "صباح الخير\nإليك بعض الأخبار لك",
   "View All" : "عرض الكل",
   "Go To Home" : "الذهاب إلى الرئيسية",
   "Theme" : "السِّمة",
@@ -9,5 +9,18 @@
   "Language" : "اللغة",
   "English" : "الإنجليزية",
   "Arabic" : "العربية",
-  "Click Here" : "اضغط هنا"
+  "Click Here" : "اضغط هنا",
+  "ok" : "حسنًا",
+  "Something went wrong" : "حدث خطأ ما",
+  "Error" : "خطأ",
+  "Search" : "بحث",
+  "View Full Article" : "عرض المقال بالكامل",
+  "News App" : "تطبيق الأخبار",
+  "general" : "عام",
+  "business" : "أعمال",
+  "sports" : "رياضة",
+  "health" : "صحة",
+  "entertainment" : "ترفيه",
+  "technology" : "تكنولوجيا",
+  "science" : "علوم"
 }

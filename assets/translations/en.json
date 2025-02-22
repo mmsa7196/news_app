@@ -1,6 +1,6 @@
 {
   "Home" : "Home",
-  "Good Morning\n Here is Some News For You" : "Good Morning\n Here is Some News For You",
+  "Good Morning\nHere is Some News For You" : "Good Morning\nHere is Some News For You",
   "View All" : "View All",
   "Go To Home" : "Go To Home",
   "Theme" : "Theme",
@@ -9,5 +9,18 @@
   "Language" : "Language",
   "English" : "English",
   "Arabic" : "Arabic",
-  "Click Here" : "Click Here"
+  "Click Here" : "Click Here",
+  "ok" : "ok",
+  "Something went wrong" : "Something went wrong",
+  "Error" : "Error",
+  "Search" : "Search",
+  "View Full Article" : "View Full Article",
+  "News App" : "News App",
+  "general" : "general",
+  "business" : "business",
+  "sports" : "sports",
+  "health" : "health",
+  "entertainment" : "entertainment",
+  "technology" : "technology",
+  "science" : "science"
 }

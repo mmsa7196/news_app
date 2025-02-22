@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news_c13/models/articles.dart';
-import 'package:news_c13/models/news_data_response.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsItem extends StatelessWidget {
@@ -35,11 +35,11 @@ class NewsItem extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.fill,
                   placeholder: (context, url) =>
-                      Center(child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                      const Center(child: CircularProgressIndicator()),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -51,7 +51,7 @@ class NewsItem extends StatelessWidget {
                     .titleSmall,
                 overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Row(
@@ -78,8 +78,8 @@ class NewsItem extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          padding: EdgeInsets.all(8),
-          margin: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(8),
+          margin: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color:Theme.of(context).primaryColor ,
             borderRadius: BorderRadius.circular(24),
@@ -94,11 +94,11 @@ class NewsItem extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.fill,
                   placeholder: (context, url) =>
-                      Center(child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                      const Center(child: CircularProgressIndicator()),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -107,7 +107,7 @@ class NewsItem extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelMedium,
                 overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               FilledButton(onPressed: () {
@@ -120,13 +120,13 @@ class NewsItem extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  padding: EdgeInsets.all( 16,),
+                  padding: const EdgeInsets.all( 16,),
                   textStyle: Theme.of(context).textTheme.titleSmall,
                 ),
-                child: Row(
+                child:  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("View Full Articel"),
+                    Text("View Full Article".tr()),
                   ],
                 ),
               ),

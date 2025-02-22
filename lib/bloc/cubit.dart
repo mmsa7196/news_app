@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_c13/bloc/states.dart';
 import 'package:http/http.dart' as http;
@@ -29,7 +30,7 @@ class HomeCubit extends Cubit<HomeStates> {
       emit(GetSourcesLoadingState());
 
       sourceResponse = await homeRepo.getSources(catID);
-      if (sourceResponse!.status == "ok") {
+      if (sourceResponse!.status == "ok".tr()) {
         await getNewsData();
         emit(GetSourcesSuccessState());
       } else {
@@ -47,13 +48,13 @@ class HomeCubit extends Cubit<HomeStates> {
 
       newsDataResponse = await homeRepo
           .getNewsData(sourceResponse?.sources?[selectedIndex].id ?? "");
-      if (newsDataResponse!.status == "ok") {
+      if (newsDataResponse!.status == "ok".tr()) {
         emit(GetNewsDataSuccessState());
       } else {
         emit(GetNewsDataErrorState(error: newsDataResponse?.message ?? ""));
       }
     } catch (e) {
-      emit(GetNewsDataErrorState(error: "Something went wrong"));
+      emit(GetNewsDataErrorState(error: "Something went wrong".tr()));
     }
   }
 }

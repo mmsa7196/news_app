@@ -9,6 +9,5 @@ abstract class BaseTheme {
 
   Color get iconColor;
 
-
   ThemeData get themeData;
 }
